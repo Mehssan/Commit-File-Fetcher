@@ -44,8 +44,39 @@ function readAndModifyLinesFromFile(filePath) {
     return nonEmptyModifiedLines;
 }
 
+function commentOutAllFilesInDirectory(directoryPath) {
+    try {
+      const files = fs.readdirSync(directoryPath);
+  
+      files.forEach(fileName => {
+        const filePath = path.join(directoryPath, fileName);
+        commentOutFile(filePath, "/*", "*/");
+      });
+  
+      console.log('All files in the directory have been fully commented.');
+    } catch (error) {
+      console.error(`Error commenting out files: ${error}`);
+    }
+  }
+  
+  function commentOutFile(filePath, commentStart, commentEnd) {
+    try {
+      const fileContent = fs.readFileSync(filePath, 'utf-8');
+      const lines = fileContent.split('\n');
+  
+      const existingComments = lines.filter(line => line.trim().startsWith('//') || line.trim().startsWith('/*') || line.trim().endsWith('*/'));
+      const contentWithoutComments = lines.filter(line => !existingComments.includes(line));
+      const commentedContent = commentStart + '\n' + contentWithoutComments.join('\n') + '\n' + commentEnd;
+  
+      fs.writeFileSync(filePath, commentedContent);
+    } catch (error) {
+      console.error(`Error commenting out file: ${error}`);
+    }
+  }
+
+
 // Example usage
-function copyFiles(){
+function copyFiles(commentFilesFlag){
 const sourceFilePaths = readNonEmptyLinesFromFile("SourceFilePath.txt");
 const binFilePaths =    readAndModifyLinesFromFile("SourceFilePath.txt");
 const destinationPathBin = './CopiedBin';
@@ -53,7 +84,11 @@ const destinationPath = './Copied';
 
 copySpecificFilesByPaths(sourceFilePaths, destinationPath);
 copySpecificFilesByPaths(binFilePaths, destinationPathBin);
-console.log("Done")
+console.log("All Files Copied")
+if(commentFilesFlag)
+  commentOutAllFilesInDirectory(destinationPath);
+else
+ console.log("Skipping comments")
 }
 
 module.exports = copyFiles;

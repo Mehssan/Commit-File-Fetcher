@@ -4,11 +4,11 @@ const fs = require('fs');
 const copyFiles = require("./FileCopier");
 
 
-const userEmail = 'iram@i2cinc.com';
+const userEmail = 'mehssan@i2cinc.com';
 const repositoryPath = ['D:/Repositry/APIs','D:/Repositry/Git S3 Repository/CommonBusinessServices','D:/Repositry/Git S3 Repository/Services3.0','D:/Repositry/Git S3 Repository/CommonServices'];
 const fromDate = '2023-07-19'; // Replace with your desired "from" date
 const toDate = '2023-08-15';   // Replace with your desired "to" date
-
+const commentFilesFlag= true;
 
 
 clearFileContents("SourceFilePath.txt")
@@ -20,7 +20,7 @@ fetchFilesFromGit(repositoryPath,userEmail,fromDate,toDate).then(async (promises
     console.log("fetchFilesFromGit completed successfully.");
     console.log("Copying Files now");
 
-    copyFiles();
+    copyFiles(commentFilesFlag);
 })
 
 
