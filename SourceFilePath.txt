@@ -4,8 +4,6 @@ D:\Repositry\APIs\ChAuthService-3.0\src\com\i2c\chauth\util\CommonUtilities.java
 D:\Repositry\APIs\ServicesAPI\src\com\i2c\services\handlers\ManageChBeneficiariesHandler.java
 D:\Repositry\APIs\ServicesAPI\src\com\i2c\services\handlers\AddPayeeHandler.java
 
-D:\Repositry\Git S3 Repository\CommonServices\common-beans\src\com\i2c\services\common\beans\AlertTypes.java
-D:\Repositry\Git S3 Repository\CommonServices\common-business-utils\src\com\i2c\services\common\business\util\constants\CommonBusinessConstants.java
 D:\Repositry\Git S3 Repository\Services3.0\BusinessServices\common-business-services-debit\src\com\i2c\mcp\services\business\debit\wrappers\logchalert\LogChAlertsService.java
 D:\Repositry\Git S3 Repository\Services3.0\BusinessServices\common-business-services-debit\src\com\i2c\mcp\services\business\debit\wrappers\performofacavs\PerformOfacAvs.java
 D:\Repositry\Git S3 Repository\Services3.0\BusinessServices\common-perform-ofac-avs\src\com\i2c\mcp\services\business\performofacavs\beans\PerformOfacAvsReqInfo.java
@@ -22,3 +20,5 @@ D:\Repositry\Git S3 Repository\Services3.0\BusinessServices\common-update-trans-
 D:\Repositry\Git S3 Repository\Services3.0\BusinessServices\common-get-email-statements\src\com\i2c\mcp\services\business\getemailstatement\utils\CommonUtilities.java
 D:\Repositry\Git S3 Repository\Services3.0\BusinessServices\common-business-layer-controller\src\com\i2c\mcp\services\business\blcontroller\subflow\impl\AddDebitCardSubFlowExecService.java
 D:\Repositry\Git S3 Repository\Services3.0\BusinessServices\common-business-layer-controller\src\com\i2c\mcp\services\business\blcontroller\subflow\impl\AddDebitCardSubFlowExecService.java
+D:\Repositry\Git S3 Repository\CommonServices\common-beans\src\com\i2c\services\common\beans\AlertTypes.java
+D:\Repositry\Git S3 Repository\CommonServices\common-business-utils\src\com\i2c\services\common\business\util\constants\CommonBusinessConstants.java

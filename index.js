@@ -10,7 +10,8 @@ const fromDate = '2023-07-19'; // Replace with your desired "from" date
 const toDate = '2023-08-15';   // Replace with your desired "to" date
 const commentFilesFlag= true;
 
-
+createDirectoryIfNotExists("./Copied")
+createDirectoryIfNotExists("./CopiedBin")
 clearFileContents("SourceFilePath.txt")
 deleteAllFilesInFolder("./Copied")
 deleteAllFilesInFolder("./CopiedBin")
@@ -64,5 +65,15 @@ function clearFileContents(filePath) {
       console.log(`Contents of ${filePath} have been cleared.`);
     } catch (error) {
       console.error(`Error clearing file contents: ${error}`);
+    }
+  }
+
+
+  function createDirectoryIfNotExists(directoryPath) {
+    if (!fs.existsSync(directoryPath)) {
+      fs.mkdirSync(directoryPath);
+      console.log(`Directory ${directoryPath} created.`);
+    } else {
+      console.log(`Directory ${directoryPath} already exists.`);
     }
   }
