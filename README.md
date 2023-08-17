@@ -9,6 +9,7 @@ The Commit File Fetcher is a simple project that retrieves all the files committ
 - Requires only the user's email, paths to local repositories, and the desired date range.
 - Utilizes JavaScript to retrieve the files.
 - Easy to use: Install Node.js, run the command `node index.js`, and you're good to go!
+- Pass flag commentFilesFlag as true to comment all Java files 
 
 ## Getting Started
 
